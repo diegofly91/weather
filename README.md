@@ -37,3 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 npm run test
 https://feralamillo.medium.com/create-react-app-typescript-testing-with-jest-and-enzyme-869fdba1bd3
+
+
+### Config Material UI 
+
+https://dev.to/hajhosein/nextjs-mui-v5-typescript-tutorial-and-starter-3pab
