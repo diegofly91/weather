@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '@/styles/Home.module.scss';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <header className={styles.header}>
-         header
-      </header>
+      <Header className={styles.header}/>
 
       <main className={styles.main}>
         <h3>
@@ -23,9 +22,8 @@ const Home: NextPage = () => {
         </h3>
       </main>
 
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
+      <Footer  className={styles.footer}/>
+
     </div>
   )
 }
