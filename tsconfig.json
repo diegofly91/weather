@@ -21,7 +21,8 @@
       "@/constant/*":["constant/*"],
       "@/components/*":["src/components/*"],
       "@/hooks/*":["src/hooks/*"],
-      "@/pages/*":["src/pages/*"]
+      "@/pages/*":["src/pages/*"],
+      "@/public/*": ["public/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/__test__/setupTest.js", "src/__mocks__/styleMock.js"],

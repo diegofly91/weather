@@ -8,7 +8,6 @@ $breakpoint-tablet: 768px;
     .header {
         grid-column: 1;
         grid-row: 1;
-        width: 100%;
     }
     
     .main {
@@ -29,6 +28,10 @@ $breakpoint-tablet: 768px;
     }
 
     @media (max-width: $breakpoint-tablet) {
+        .Layout {
+            padding-left: 0px;
+            padding-right: 0px;        
+        }
         
         .main {
 
