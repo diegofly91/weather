@@ -1,6 +1,7 @@
 
 import useCurrentWeatherHook from '@/hooks/useCurrenWeatherHook';
 import ContainerBlock from '../Container/ContainerBlock';
+import { Avatar } from '@mui/material';
 import AirIcon from '@mui/icons-material/Air';
 import useStyles from './currentWether.styles';
 import { NowResponse } from "m3o/weather";
@@ -30,12 +31,10 @@ const CurrenWeater = () => {
                   <span className={classes.large}>
                       Cloud Cover {currentWeather.cloud}%
                    </span>
-                   {currentWeather.icon_url  && <Image
-                        src={`https:${currentWeather?.icon_url}`} 
-                        alt="Picture of the author"
-                        width={64}
-                        height={64}
-                  />}
+                   {currentWeather.icon_url  && <Avatar 
+                      src={currentWeather.icon_url}
+                      sx={{ width: 64, height: 64 }}
+                    />}
                    <span className={classes.large}>
                      {currentWeather.temp_c}° 
                    </span>
