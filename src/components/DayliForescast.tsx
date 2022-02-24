@@ -1,28 +1,28 @@
 import { useContext } from 'react';
-import { Typography, Container, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { WeatherContext  } from '@/contexts/WeatherContext';
 import CardWeather from './Card/CardWeather';
 import { IForescasCity } from '@/interfaces/index';
 import { makeStyles, createStyles } from '@mui/styles';
 import  useForestcastHook from '../hooks/useForestcastHook';
 import Loader from './Loader';
+import ContainerBlock from '@/components/Container/ContainerBlock';
+import RowRadioDays from './RowRadio/RowRadioDays';
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
-    root: {
-      border: 0,
-      marginTop: '20px',
-      borderRadius: 8,
-      minHeight: 200,
-      boxShadow: '0 3px 5px 2px rgb(108 129 189 / 30%)',
-      padding: '10px 30px',
-      maxWidth: '90%',
-      [theme.breakpoints.down('sm')]: {
-        padding: '10px',
-    },
+    containerOpc : {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: theme.spacing(2),
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+            justifyContent: 'center'
+        }
     },
     title: {
         fontWeight: 600,
-        marginBottom: theme.spacing(2),
         [theme.breakpoints.down('sm')]: {
             fontSize: '17px',
         },
@@ -33,16 +33,17 @@ const DayliForescast = () => {
     const {  city } = useContext(WeatherContext);
     const classes = useStyles();
     const { cityWeather, loader } = useForestcastHook();
-    return <Container 
-               className={classes.root}      
-            >
-                <Typography 
-                    variant="h5" 
-                    component="div"
-                    className={classes.title}
-                >
-                        Daily Forecast {city}
-                </Typography>
+    return <ContainerBlock>
+                <div className={classes.containerOpc}>
+                    <Typography 
+                        variant="h5" 
+                        component="div"
+                        className={classes.title}
+                    >
+                            Daily Forecast
+                    </Typography>
+                    <RowRadioDays />
+                </div>
                 <Grid
                     container
                     flexDirection='row'
@@ -52,7 +53,7 @@ const DayliForescast = () => {
                     {loader?<Loader />:
                             cityWeather?.forecast.map((item: IForescasCity)=> {return <CardWeather data={item} key={`${city}${item.date}`}/> })} 
                 </Grid>
-          </Container>; 
+           </ContainerBlock>; 
 }
 
 export default DayliForescast;

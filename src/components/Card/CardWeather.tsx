@@ -2,7 +2,8 @@ import * as React from 'react';
 import { Avatar, Box } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { IForescasCity } from '@/interfaces/index';
-
+import LightModeIcon from '@mui/icons-material/LightMode';
+import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { createStyles, makeStyles } from '@mui/styles';
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 
 
 const CardWeather = ({data}: Props) => { 
-    const { icon_url, date, min_temp_c, max_temp_c, condition } = data;
+    const { icon_url, date, min_temp_c, max_temp_c, condition, sunset, sunrise } = data;
     const classes = useStyles()
     return<Box
             className={classes.root}
@@ -32,6 +33,16 @@ const CardWeather = ({data}: Props) => {
                     <Typography variant="subtitle2" component="div" align="center">
                       {condition}
                     </Typography>
+                    <div>
+                       <LightModeIcon 
+                         htmlColor='#feb32f'
+                       /> {sunrise}
+                    </div>
+                    <div>
+                      <ModeNightIcon 
+                        htmlColor="#2c8fe9"
+                      /> {sunset}
+                    </div>
           </Box>
 }
 
@@ -53,6 +64,12 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
         cursor: 'pointer'
 
       },
+      '&  div': {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems:'center',
+        padding: '3px'
+     },
       [theme.breakpoints.down('sm')]: {
         width: '45%',
       },

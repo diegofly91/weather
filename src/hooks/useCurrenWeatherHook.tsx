@@ -1,11 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
 import { WeatherContext } from '@/contexts/WeatherContext';
-import { requestForescast } from '@/services/getWeaterByCity';
+import { getCurrentWeather } from '@/services/getWeaterByCity';
 
-// Get the weather forecast for the next 1-10 days
-  function useForestcastHook(){
-    const { city, days } = useContext(WeatherContext);
-    const [ cityWeather, setCityWeather ] = useState(null);
+  function useCurrentWeatherHook(){
+    const { city } = useContext(WeatherContext);
+    const [ currentWeather, setCurrentWeather ] = useState({});
     const [ error, setError ] = useState(false);
     const [ loader, setLoader ] = useState(true);
 
@@ -14,21 +13,21 @@ import { requestForescast } from '@/services/getWeaterByCity';
             if(city){
                 requestData();
             }
-    },[city, days]);
+    },[city]);
 
     const requestData = async () => {
       
-        requestForescast(city, days)
+        getCurrentWeather(city)
         .then(res => {
           setLoader(false);
-          setCityWeather(res)
+          setCurrentWeather(res)
         })
         .catch(err => console.error(err))
     
     } 
-    return { cityWeather, error, loader }
+    return { currentWeather, error, loader }
   }
 
 
   
-export default useForestcastHook;
+export default useCurrentWeatherHook;
