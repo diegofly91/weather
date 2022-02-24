@@ -1,17 +1,17 @@
 export interface ICityWeather {
 
-    location: String;
-    region: String;
-    country: String;
+    location: string;
+    region: string;
+    country: string;
     latitude: number,
     longitude: number,
-    timezone: String;
-    local_time: String;
+    timezone: string;
+    local_time: string;
     forecast: IForescasCity[]; 
 }
 
 export interface IForescasCity {
-    date: String;
+    date: string;
     max_temp_c: number;
     max_temp_f: number;
     min_temp_c: number;
@@ -20,10 +20,10 @@ export interface IForescasCity {
     avg_temp_f: number;
     will_it_rain: boolean;
     chance_of_rain: number;
-    condition: String;
-    icon_url: String;
-    sunrise: String;
-    sunset: String;
+    condition: string;
+    icon_url: string;
+    sunrise: string;
+    sunset: string;
     max_wind_mph: number;
     max_wind_kph: number;
 

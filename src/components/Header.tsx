@@ -3,6 +3,7 @@ import Image from 'next/image';
 import SelectCity from './Select/SelectCity';
 import { createStyles, makeStyles } from '@mui/styles';
 import {Typography, Container} from '@mui/material';
+import { Theme } from '@mui/material/styles';
 
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
