@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.scss';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import DayliForescast from '@/components/DayliForescast';
+import CurrenWeater from '@/components/CurrentWeather/CurrentWeather';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Header className={styles.header}/>
 
       <main className={styles.main}>
+        <CurrenWeater />
         <DayliForescast />
       </main>
 
