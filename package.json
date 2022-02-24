@@ -41,7 +41,6 @@
   },
   "react-dotenv": {
     "whitelist": [
-      "NEXT_PUBLIC_URI",
       "API_KEY"
     ]
   }
