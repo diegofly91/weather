@@ -10,8 +10,8 @@ const RowRadioDays = () => {
 
   const { days, setDays } = useContext(WeatherContext);  
  
-  const handleChange = (event:ChangeEvent<HTMLInputElement>) => {
-    setDays(event.target.value);
+  const handleChange = (event:React.SyntheticEvent) => {
+    setDays((event.target as HTMLInputElement).value);
   };
 
   return (

@@ -8,6 +8,8 @@ import  useForestcastHook from '../hooks/useForestcastHook';
 import Loader from './Loader';
 import ContainerBlock from '@/components/Container/ContainerBlock';
 import RowRadioDays from './RowRadio/RowRadioDays';
+import { Theme } from '@mui/material/styles';
+import { Forecast } from "m3o/weather";
 
 const useStyles = makeStyles((theme: Theme) => createStyles({
     containerOpc : {
@@ -32,7 +34,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 const DayliForescast = () => {
     const {  city } = useContext(WeatherContext);
     const classes = useStyles();
-    const { cityWeather, loader } = useForestcastHook();
+    const { forecast, loader } = useForestcastHook();
     return <ContainerBlock>
                 <div className={classes.containerOpc}>
                     <Typography 
@@ -50,8 +52,8 @@ const DayliForescast = () => {
                     justifyContent="space-around"
                     alignItems="stretch"
                 >
-                    {loader?<Loader />:
-                            cityWeather?.forecast.map((item: IForescasCity)=> {return <CardWeather data={item} key={`${city}${item.date}`}/> })} 
+                    {loader && <Loader />}
+                    {!loader && forecast && forecast.map((item: IForescasCity)=> {return <CardWeather data={item} key={`${city}${item.date}`}/> })} 
                 </Grid>
            </ContainerBlock>; 
 }

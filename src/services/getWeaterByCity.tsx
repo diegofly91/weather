@@ -15,5 +15,6 @@ export const getCurrentWeather = async (city: string) => {
   const rsp: NowResponse = await weatherService.now({
     location: city,
   });
+  
   return rsp;
 }

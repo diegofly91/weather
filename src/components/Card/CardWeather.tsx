@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { Avatar, Box } from '@mui/material';
-import Typography from '@mui/material/Typography';
+import { Avatar, Box, Typography } from '@mui/material';
 import { IForescasCity } from '@/interfaces/index';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { createStyles, makeStyles } from '@mui/styles';
+import { Theme } from '@mui/material/styles';
+
 
 type Props = {
     data: IForescasCity

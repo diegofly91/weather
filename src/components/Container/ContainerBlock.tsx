@@ -2,6 +2,7 @@ import { ReactChildren } from 'react';
 import { Container } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
 import clsx from  'clsx';
+import { Theme } from '@mui/material/styles';
 
 
 const useStyles = makeStyles((theme: Theme) => createStyles({

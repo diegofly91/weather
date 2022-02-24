@@ -10,14 +10,7 @@ const Footer = ( {className}:Props ) => {
     return<div className={className}>
             <div className={styles.container}>
                 <div>
-                    &copy; 2022 {" "} creado por {" "}
-                    <a
-                        href="https://diegofly91.github.io/diegolibreros/"
-                    // className={aClasses}
-                        target="_blank"
-                    >
-                        Diego Libreros
-                    </a>{" "}
+                    &copy; 2022 {" "}  Diego Libreros
                 </div>
             </div>
         </div>;
