@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import DayliForescast from '@/components/DayliForescast';
 import CurrenWeater from '@/components/CurrentWeather/CurrentWeather';
 
+
 const Home: NextPage = () => {
   return (
     <div className={styles.Layout}>
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       </main>
 
       <Footer  className={styles.footer}/>
+
 
     </div>
   )

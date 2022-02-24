@@ -14,6 +14,7 @@ const Footer = ( {className}:Props ) => {
                 </div>
             </div>
         </div>;
+
 }
 
 export default Footer;
