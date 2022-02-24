@@ -2,6 +2,7 @@
   "name": "weather",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://diegofly91.github.io/weather",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
