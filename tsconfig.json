@@ -24,7 +24,9 @@
       "@/pages/*":["src/pages/*"],
       "@/utils/*": ["src/utils/*"],
       "@/constants/*": ["src/constants/*"],
-      "@/interfaces/*": ["src/interfaces/*"]
+      "@/interfaces/*": ["src/interfaces/*"],
+      "@/contexts/*": ["src/contexts/*"],
+      "@/services/*": ["src/services/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/__test__/setupTest.js", "src/__mocks__/styleMock.js"],

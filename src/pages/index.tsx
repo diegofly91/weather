@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '@/styles/Home.module.scss';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import DayliForescast from '@/components/DayliForescast';
 
 const Home: NextPage = () => {
   return (
@@ -17,9 +17,7 @@ const Home: NextPage = () => {
       <Header className={styles.header}/>
 
       <main className={styles.main}>
-        <h3>
-         {process.env.NEXT_PUBLIC_API_URL}
-        </h3>
+        <DayliForescast />
       </main>
 
       <Footer  className={styles.footer}/>

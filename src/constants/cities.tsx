@@ -2,18 +2,19 @@ import { ICity } from "@/interfaces/index";
 
 export const Cities: ICity[] = [
     {
-        name: 'Bogota'
+        name: 'Bogota',
+        value: 'Bogota'
     },
     {
-        name: 'Buenos Aires'
+        name: 'Buenos Aires',
+        value: 'Buenos Aires'
     },
     {
-        name: 'Rio de Janeiro'
+        name: 'Rio de Janeiro',
+        value: ' Rio de Janeiro'
     },
     {
-        name: 'Londres'
-    },
-    {
-        name: ''
+        name: 'Londres',
+        value: 'London'
     }
 ]
