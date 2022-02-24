@@ -28,4 +28,5 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
     </WeatherProvider>
   );
 };
+
 export default MyApp
