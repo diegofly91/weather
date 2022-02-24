@@ -1,8 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '@/styles/Home.module.scss';
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import DayliForescast from '@/components/DayliForescast';
+import CurrenWeater from '@/components/CurrentWeather/CurrentWeather';
+
 
 const Home: NextPage = () => {
   return (
@@ -13,19 +16,16 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <header className={styles.header}>
-         header
-      </header>
+      <Header className={styles.header}/>
 
       <main className={styles.main}>
-        <h3>
-         {process.env.NEXT_PUBLIC_API_URL}
-        </h3>
+        <CurrenWeater />
+        <DayliForescast />
       </main>
 
-      <footer className={styles.footer}>
-        <Footer />
-      </footer>
+      <Footer  className={styles.footer}/>
+
+
     </div>
   )
 }

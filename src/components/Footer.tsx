@@ -1,9 +1,14 @@
 import React from 'react';
 import styles from '../styles/components/footer.module.css';
 
-const Footer = () => {
+type Props = {
+    className: any
+}
 
-    return(<div className={styles.container}>
+const Footer = ( {className}:Props ) => {
+
+    return<div className={className}>
+            <div className={styles.container}>
                 <div>
                     &copy; 2022 {" "} creado por {" "}
                     <a
@@ -14,7 +19,9 @@ const Footer = () => {
                         Diego Libreros
                     </a>{" "}
                 </div>
-            </div>);
+            </div>
+        </div>;
+
 }
 
 export default Footer;
